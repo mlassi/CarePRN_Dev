@@ -24,6 +24,14 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+    <!-- Required Framework Dependencies -->
+    <script src="node_modules/jquery/dist/jquery.min.js" ></script>
+    <script src="node_modules/angular/angular.min.js" ></script>
+
+    <!-- Required Javscript Files -->
+    <script src="app/src/app.js"></script>
+    <script src="app/src/appController.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,7 +41,7 @@
 
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" class="index" ng-controller="appController">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -396,7 +404,7 @@
             </div>
         </div>
     </aside>
-    
+
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
