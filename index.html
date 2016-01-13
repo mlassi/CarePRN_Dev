@@ -27,11 +27,11 @@
     <!-- Required Framework Dependencies -->
     <script src="node_modules/jquery/dist/jquery.min.js" ></script>
     <script src="node_modules/angular/angular.min.js" ></script>
+    <script src="node_modules/angular-mocks/angular-mocks.js"></script>
 
     <!-- Required Javscript Files -->
     <script src="app/src/app.js"></script>
     <script src="app/src/appController.js"></script>
-    <script src="app/test/appController.spec.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,7 +42,7 @@
 
 </head>
 
-<body id="page-top" class="index" ng-controller="appController">
+<body id="page-top" class="index" ng-app="CarePRN" ng-controller="appController">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">

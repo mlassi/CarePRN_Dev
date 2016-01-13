@@ -1,1 +1,3 @@
-var app = angular.module("CarePRN", []); 
+'use strict';
+
+var app = angular.module("CarePRN", []);
