@@ -1,3 +1,3 @@
 'use strict';
 
-var app = angular.module("CarePRN", []);
+var app = angular.module("CarePRN", ['firebase']);

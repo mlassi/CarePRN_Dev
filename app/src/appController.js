@@ -11,8 +11,25 @@
 // };
 'use strict';
 
-app.controller('appController',  ['$scope', function ($scope) {
+app.controller('appController',  ['$scope', '$firebaseObject', '$firebaseArray',
+  function ($scope, $firebaseObject) {
   // Do something with myService
-  console.log('something');
-  $scope.aValue = 'hello';
+  var ref = new Firebase('https://careprndev.firebaseio.com/signup');
+  $scope.customerOutput = [];
+
+  ref.on("child_added", function(snapshot, prevChildKey) {
+    var data = snapshot.val().entity;
+    var customer = {
+      firstName : data.firstName,
+      lastName: data.lastName,
+      email: data.email
+    };
+    if(data.careType == "provider"){
+      $scope.customerOutput.push(customer);
+    }
+    if(data.careType == "provider"){
+      console.log("\nName: " + customer.firstName + " " + customer.lastName + "\nEmail: " + customer.email + "\n");
+    }
+  });
+
 }]);

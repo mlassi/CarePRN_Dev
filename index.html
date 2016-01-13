@@ -28,6 +28,8 @@
     <script src="node_modules/jquery/dist/jquery.min.js" ></script>
     <script src="node_modules/angular/angular.min.js" ></script>
     <script src="node_modules/angular-mocks/angular-mocks.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="node_modules/angularfire/dist/angularfire.js"></script>
 
     <!-- Required Javscript Files -->
     <script src="app/src/app.js"></script>
@@ -99,6 +101,10 @@
 
     <!-- Services Section -->
     <section id="services">
+      <div ng-repeat="customer in finalOut">
+          <p>{{customer.firstName}}</p>
+          <p>Hi</p>
+      </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
